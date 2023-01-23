@@ -65,26 +65,45 @@ Program for Endocers and Decoders  and verify its truth table in quartus using V
 Developed by: Lokesh N
 RegisterNumber:  22008481
 i)ENCODER:
+
 module exp8(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+
 output a,b,c;
+
 input d0,d1,d2,d3,d4,d5,d6,d7;
+
 or(a,d4,d5,d6,d7);
+
 or(b,d2,d3,d6,d7);
+
 or(c,d1,d3,d5,d7);
+
 endmodule
 
 ii)DECODER:
+
 module dec(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+
 output d0,d1,d2,d3,d4,d5,d6,d7;
+
 input a,b,c;
+
 assign d0=(~a & ~b & ~c) ;
+
 assign d1=(~a & ~b &c);
+
 assign d2=(~a & b &~c);
+
 assign d3=(~a & b &c);
+
 assign d4=(a &~b&~c);
+
 assign d5=(a &~b&c);
+
 assign d6=(a&b&~c);
+
 assign d7=(a&b&c);
+
 endmodule
  
 */
@@ -96,8 +115,11 @@ endmodule
 
 ### RTL LOGIC  
 Encoder
+
 ![image](https://user-images.githubusercontent.com/119393019/213957446-11031d99-42c5-4d54-b051-c4de4f6e3c98.png)
+
 Decoder
+
 ![image](https://user-images.githubusercontent.com/119393019/213957471-df7538e8-59b4-4768-9b28-b3e570d0b9b8.png)
 
 
@@ -108,18 +130,24 @@ Decoder
 
 ### TIMING DIGRAMS  
 Encoder
+
 ![image](https://user-images.githubusercontent.com/119393019/213957525-d45f21ad-7f69-400f-af1c-1d321c6a438e.png)
 ![image](https://user-images.githubusercontent.com/119393019/213957550-2f6e9815-f937-4b70-8cec-31ab8a37934c.png)
 ![image](https://user-images.githubusercontent.com/119393019/213957559-40951fab-3b68-4741-94a5-3152db8e01bf.png)
+
 Decoder
+
 ![image](https://user-images.githubusercontent.com/119393019/213957590-d28ff5c1-8e86-478f-a8e8-cc2d9552c951.png)
 
 
 
 ### TRUTH TABLE 
 Encoder
+
 ![image](https://user-images.githubusercontent.com/119393019/213957617-7d9d11e8-3189-4d37-b4a2-d4ca6a11c718.png)
+
 decoder
+
 ![image](https://user-images.githubusercontent.com/119393019/213957638-32ddf276-c626-45aa-bcaa-eedaaf64aebf.png)
 
 
